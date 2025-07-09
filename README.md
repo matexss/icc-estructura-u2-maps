@@ -10,6 +10,9 @@ Este repositorio se refiere a la segunda unidad de Estructuras de Datos, donde s
 ## IMAGEN
 ![alt text](image.png)
 
+## IMAGEN CAPUTRA 2
+![alt text](image-1.png)
+
 ## Definición de Maps en Java
 
 Un **Map** en Java es una estructura de datos que almacena pares clave-valor, donde cada clave es única dentro del mapa. Java proporciona varias implementaciones de `Map`, cada una con sus propias características:
