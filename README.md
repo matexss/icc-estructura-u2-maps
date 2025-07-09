@@ -2,6 +2,47 @@
 
 ## Getting Started
 
+# Non-Linear Data Structures 
+
+## Resumen del Proyecto
+
+Este proyecto corresponde a la segunda unidad de la materia de Estructura de Datos y está enfocado en el estudio y aplicación de estructuras de datos no lineales, específicamente los **Maps** (diccionarios) en Java. El objetivo es comprender cómo almacenar, acceder y manipular información de manera eficiente utilizando las colecciones más representativas de Java: `HashMap`, `LinkedHashMap` y `TreeMap`.
+
+### ¿Qué encontrarás en este repositorio?
+
+- **Implementación de CRUD para Empleados:**  
+  Se desarrollan clases DAO (Data Access Object) que permiten crear, leer, actualizar y eliminar empleados utilizando diferentes tipos de Map. Esto permite comparar el comportamiento de cada implementación en cuanto a orden, eficiencia y manejo de claves.
+
+- **Ejercicios prácticos con Maps:**  
+  Incluye ejercicios clásicos de programación como:
+  - Verificar si dos palabras son anagramas usando mapas de frecuencia.
+  - Encontrar dos números en un arreglo cuya suma sea igual a un objetivo.
+  - Contar la frecuencia de caracteres en una cadena.
+  Estos ejercicios muestran cómo los Maps pueden resolver problemas de búsqueda y conteo de manera eficiente.
+
+- **Comparación entre HashMap, LinkedHashMap y TreeMap:**  
+  El código y la documentación explican las diferencias clave entre estas implementaciones:
+  - `HashMap`: No garantiza orden, acceso rápido.
+  - `LinkedHashMap`: Mantiene el orden de inserción.
+  - `TreeMap`: Ordena automáticamente las claves.
+
+- **Buenas prácticas y patrones de diseño:**  
+  Se utiliza el patrón DAO para separar la lógica de acceso a datos de la lógica de negocio, facilitando la mantenibilidad y escalabilidad del código.
+
+- **Ejemplos comentados y documentación:**  
+  Cada clase y método cuenta con comentarios explicativos y ejemplos de uso, lo que facilita el aprendizaje autodidacta y la reutilización del código.
+
+- **Aplicaciones reales:**  
+  Los ejemplos y ejercicios están inspirados en situaciones reales como la gestión de empleados, directorios y procesamiento de texto, mostrando la aplicabilidad de los Maps en el desarrollo de software profesional.
+
+### Público objetivo
+
+Este repositorio está dirigido a estudiantes, docentes y desarrolladores que deseen profundizar en el uso de colecciones no lineales en Java, mejorar sus habilidades de programación y comprender cómo elegir la estructura de datos adecuada para cada problema.
+
+---
+
+## Getting Started
+
 Este repositorio se refiere a la segunda unidad de Estructuras de Datos, donde se cubren estructuras como sets y diccionarios
 ## Requirements
 - Java JDK 11 or higher
