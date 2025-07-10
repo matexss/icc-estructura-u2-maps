@@ -28,19 +28,27 @@ public class Ejercicios {
      * frecuencia.
      */
     public static boolean areAnagrams(String str1, String str2) {
-        if (str1 == null || str2 == null || str1.length() != str2.length()) {
-            return false;
-        }
-        HashMap<Character, Integer> map1 = new HashMap<>();
-        HashMap<Character, Integer> map2 = new HashMap<>();
+        if(str1.length() != str2.length()) return false;
+
+        HashMap<Character, Integer> charCount = new HashMap<>();
+
         for (char c : str1.toCharArray()) {
-            map1.put(c, map1.getOrDefault(c, 0) + 1);
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
         }
+
         for (char c : str2.toCharArray()) {
-            map2.put(c, map2.getOrDefault(c, 0) + 1);
+            if (!charCount.containsKey(c)) {
+                return false;
+            }
+            charCount.put(c, charCount.get(c) - 1);
+            if (charCount.get(c) == 0) {
+                charCount.remove(c);
+            }
         }
-        return map1.equals(map2);
-    }
+
+        
+        return true;
+    }        
 
     /*
      * Dado un array de números enteros y un objetivo, retorna los índices de dos
@@ -94,19 +102,25 @@ public class Ejercicios {
      * Output: true
      */
     public boolean sonAnagramas(String palabra1, String palabra2) {
-        if (palabra1 == null || palabra2 == null || palabra1.length() != palabra2.length()) {
-            return false;
-        }
-        HashMap<Character, Integer> map1 = new HashMap<>();
+         if(palabra1.length() != palabra2.length()) return false;
+
+        HashMap<Character, Integer> charCount = new HashMap<>();
+
         for (char c : palabra1.toCharArray()) {
-            map1.put(c, map1.getOrDefault(c, 0) + 1);
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
         }
+
         for (char c : palabra2.toCharArray()) {
-            if (!map1.containsKey(c) || map1.get(c) == 0) {
+            if (!charCount.containsKey(c)) {
                 return false;
             }
-            map1.put(c, map1.get(c) - 1);
+            charCount.put(c, charCount.get(c) - 1);
+            if (charCount.get(c) == 0) {
+                charCount.remove(c);
+            }
         }
+
+        
         return true;
     }
 }

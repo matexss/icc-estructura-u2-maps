@@ -1,7 +1,6 @@
 import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
 import controllers.EmpleadoDAO;
-import controllers.Mapa;
 
 import models.Empleado;
 
@@ -56,39 +55,41 @@ public class App {
 
     private static void runEjerccios() {
         Ejercicios ejercicios = new Ejercicios();
-            System.out.println("---------------------------ANAGRAMAS-------------------------------");
-        // Ejemplo de uso de areAnagrams (método estático)
-        System.out.println("¿'listen' y 'silent' son anagramas? " + Ejercicios.areAnagrams("listen", "silent"));
-        System.out.println("¿'hello' y 'bello' son anagramas? " + Ejercicios.areAnagrams("hello", "bello"));
-           
+        System.out.println();
+        System.out.println("------------------------ EJERCICIOS ------------------------");
+        System.out.println();
+        // Ejercicio 1
+        System.out.println("----- Ejercicio 1: -----");
+        String str1 = "listen";
+        String str2 = "silent";
+        System.out.println("Palabra 1: " + str1);
+        System.out.println("Palabra 2: " + str2);
+        System.out.println("Son anagramas: " + ejercicios.sonAnagramas(str1, str2));
+
+        // Ejercicio 2 
+        System.out.println("----- Ejercicio 2: -----");
+        int[] nums = { 9, 2, 3, 6 };
+        int objetivo = 5;
+        System.out.println("Nums: " + "[" + nums[0] + ", " + nums[1] + ", " + nums[2] + ", " + nums[3] + "]");
+        System.out.println("Objetivo: " + objetivo);
+        int[] resultado = ejercicios.sumatoriaDeDos(nums, objetivo);
+        if (resultado != null) {
+            System.out.println("Resultado: " + "[" + resultado[0] + ", " + resultado[1] + "]");
+        }
+        // Ejercicio 3
+        System.out.println("----- Ejercicio 3: -----");
+        String texto = "hola";
+        System.out.println("Texto: " + texto);
+        ejercicios.contarCaracteres(texto);
+
+        // Ejercicio 4
+        System.out.println("----- Ejercicio 4: -----");
+        String palabra1 = "roma";
+        String palabra2 = "amor";
+        System.out.println("Palabra 1: " + palabra1);
+        System.out.println("Palabra 2: " + palabra2);
+        System.out.println("Son anagramas: " + ejercicios.sonAnagramas(palabra1, palabra2));
         
-        System.out.println("---------------------------SUMATORIAS-------------------------------");
 
-        // Ejemplo de uso de sumatoriaDeDos
-            System.out.println("\nEjemplo 2: sumatoriaDeDos");
-        int[] numsA = {9, 2, 3, 6};
-        int objetivoA = 5;
-        int[] resultadoA = ejercicios.sumatoriaDeDos(numsA, objetivoA);
-        if (resultadoA != null) {
-            System.out.println("nums = [9,2,3,6], objetivo = 5 => Indices: [" + resultadoA[0] + "," + resultadoA[1] + "]");
-        } else {
-            System.out.println("nums = [9,2,3,6], objetivo = 5 => No hay solución.");
-        }
-
-        int[] numsB = {9, 2, 3, 6};
-        int objetivoB = 10;
-        int[] resultadoB = ejercicios.sumatoriaDeDos(numsB, objetivoB);
-        if (resultadoB != null) {
-            System.out.println("nums = [9,2,3,6], objetivo = 10 => Indices: [" + resultadoB[0] + "," + resultadoB[1] + "]");
-        } else {
-            System.out.println("nums = [9,2,3,6], objetivo = 10 => No hay solución.");
-        }
-        System.out.println("---------------------------FRECUENCIA DE CARACTERES-------------------------------");
-        // Ejemplo de uso de contarCaracteres
-        System.out.print("Frecuencia de caracteres en 'hola': ");
-        ejercicios.contarCaracteres("hola");
-
-        // Ejemplo de uso de sonAnagramas
-        System.out.println("¿'roma' y 'amor' son anagramas? " + ejercicios.sonAnagramas("roma", "amor"));
     }
 }
